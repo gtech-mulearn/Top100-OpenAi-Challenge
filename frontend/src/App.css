@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 :root{
   --yellow:#71f221;
   --blue:#ffffff;
@@ -113,4 +118,34 @@ nav ul li a{
   color: var(--yellow);
   text-align: center;
   font-family: 'poppins',Arial, Helvetica, sans-serif;
+}
+.wave{
+  display: none;
+}
+.micwave-container{
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+.micwave img{
+  width: 200px;
+  height: 200px;
+  background-color:transparent;
+  border-radius: 50%;
+
+}
+.micbtn{
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  padding: 5px 20px;
+  border-radius: 8px;
+  margin: 5px;
+}
+.btn-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  height: 40px;
 }
