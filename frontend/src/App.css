@@ -1,0 +1,116 @@
+:root{
+  --yellow:#71f221;
+  --blue:#ffffff;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Oswald',Arial, Helvetica, sans-serif;
+}
+body{
+  background-color:black;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  padding: 10px;
+  background-color:var(--yellow);
+  align-items: center;
+  position: fixed;
+  z-index: 10000;
+  color:var(--blue);
+  font-weight: bold;
+  top: 0;
+  left: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  height: 50px;
+}
+nav img{
+  width: 60px;
+  height: 60px;
+  margin-top: 50px;
+  margin-left: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--yellow);
+}
+nav ul li{
+  display: inline-block;
+  margin: 0 30px;
+  color:var(--blue);
+  text-decoration: none;
+}
+nav ul li a{
+  color:var(--blue);
+  text-decoration: none;
+  padding: 5px 10px;
+   transition: .5s;
+   font-family: 'poppins',Arial, Helvetica, sans-serif;
+   font-size: 14px;
+}
+.active{
+  color: white;
+  border: 1px solid white;
+  border-radius: 20px;
+}
+
+.menu-container{
+    display: none;
+}
+.menu{
+    color: var(--yellow);
+}
+#home{
+  background-color: rgba(0, 0, 0, 0.695);
+  /* height: 100vh; */
+  overflow: hidden;
+}
+.hero{
+  display: flex;
+  justify-content: center;
+  height:100vh;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+}
+.hero button{
+  background-color: transparent;
+  border: 2px solid var(--yellow);
+  padding: 8px 35px;
+  color: var(--yellow);
+  border-radius:5px;
+  position: relative;
+ transform: translateY(30px);
+ font-family: 'poppins',Arial, Helvetica, sans-serif;
+}
+.hero button::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+   background-color: var(--yellow);
+   border-radius: 3px;
+   top: 0;
+   left: 0;
+   transition: .5s;
+   z-index: -1;
+}
+.hero button:hover::after{
+    width: 100%;
+}
+.hero button:hover{
+    color: black;
+    z-index: 2;
+
+}
+
+.hero h1{
+  font-size: 6rem;
+  color: var(--yellow);
+  text-align: center;
+  font-family: 'poppins',Arial, Helvetica, sans-serif;
+}
