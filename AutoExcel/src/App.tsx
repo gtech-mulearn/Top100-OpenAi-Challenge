@@ -1,16 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import { Button } from './components/ui/button'
-import { Calendar } from './components/ui/calendar'
+import Upload from './pages/Upload'
+import Chat from './pages/Chat'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <Button variant="outline" className='hover:bg-white'>shadcn</Button>
+      <Router>
+          <Routes>
+              <Route path="/" element={<Upload />} />
+              <Route path="/chat" element={<Chat />} />
+          </Routes>
+      </Router>
     </>
   )
 }

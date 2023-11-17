@@ -1,0 +1,48 @@
+.upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* This will make the container take the full height of the viewport */
+    background-color: #22223B;
+  }
+  
+  .typing {
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;    
+    font-size: 2rem;
+    color: #9A8C98;
+    margin-bottom: 1.1rem;
+    
+  }
+  .btn1{
+    background-color: #C9ADA7;
+    color: #4A4E69;
+    border: none;
+    border-radius: 0.15rem;
+    padding: 0.6rem 1rem;
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    margin-top: 10px;
+    font-weight: 700;
+  }
+  .link {
+    
+    background-color: transparent;
+    border: 2px solid #9A8C98; /* Set your desired border color */
+    padding: 10px; /* Adjust padding as needed */
+    color: #000000; /* Set your desired text color */
+    width: 200px; /* Set your desired width */
+  }
+  
+  .link::placeholder {
+    color: #999999; /* Set your desired placeholder text color */
+  }
+
+  img{
+    filter: invert(65%);
+  }
+ 
