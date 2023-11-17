@@ -1,0 +1,106 @@
+/* .signup-container {
+    max-width: 400px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+} */
+
+main {
+    height: 100vh;
+}
+
+.jumbotron {
+    background-color: transparent;
+    height: calc(100% - 30px);
+}
+
+body {
+    background-color: #e80f0f;
+}
+
+.btn-primary {
+    background-color: #28e98c;
+    border-color: #28e98c;
+    color: #1f1f1f;
+    font-size: 15px;
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    border-color: #28e98c;
+    color: #28e98c;
+}
+
+.max-w-card {
+    max-width: 70%;
+    background-color: #ad0909;
+    margin: 0 auto;
+    color: #eee;
+    padding: 13px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.max-w-card p {
+
+    opacity: .6;
+}
+
+.max-w-card h4 {
+    font-size: 20px;
+    margin-top: 14px;
+    font-weight: 400;
+}
+
+.max-w-card a.link {
+    color: #28e98c;
+}
+
+.my-6 {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.text-green {
+    color: #28e98c;
+}
