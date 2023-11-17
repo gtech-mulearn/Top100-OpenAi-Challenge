@@ -13,7 +13,7 @@ const AudioTimer = ({
       intervalId = setInterval(() => setElapsedTime(elapsedTime + 1), 10);
     }
     return () => clearInterval(intervalId);
-  }, [isRunning, elapsedTime,setElapsedTime]);
+  }, [isRunning, elapsedTime, setElapsedTime]);
 
   //  calculation
   const hours = Math.floor(elapsedTime / 360000);
