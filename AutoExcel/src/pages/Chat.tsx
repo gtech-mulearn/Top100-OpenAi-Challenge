@@ -8,7 +8,6 @@ import '../styles/Chat.css';
 export default function Chat() {
 
     const [prompt,setPrompt] = useState('')
-    const [industry,setIndustry] = useState('')
 
     const [industry, setIndustry] = useState(() => {
         const storedIndustry = localStorage.getItem('industry');
