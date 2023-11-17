@@ -64,9 +64,9 @@ app.post("/upload", upload.single("file"), async (req, res) => {
 });
 
 // save report to database
-app.post("/report", (req, res) => {
-  const report = new Report({
-    report: answer,
+app.post("/report", async(req, res) => {
+  const report =  await new Report({
+    report:  answer,
   });
   report
     .save()
@@ -90,7 +90,7 @@ app.get("/report", (req, res) => {
 
 
 
-app.listen(4002, () => {
+app.listen(4003, () => {
   console.log("hi running");
 });
 
