@@ -16,8 +16,7 @@ const multer = require("multer");
 config();
 const model = "whisper-1";
 const openai = new OpenAI({
-  apiKey: process.env.OpenAI_API_KEY,
-  //   OPENAI_API_KEY=sk-H0cGKN6zDgYbk3z5ZTYqT3BlbkFJYx8hhZzvwAIK1r8tQjp
+  apiKey: process.env.OpenAI_API_KEY 
 });
 
 // dotenv.config();
@@ -48,6 +47,7 @@ app.post("/upload", upload.single("file"), async (req, res) => {
   filename = `./${req.file.path}`;
 
   data = await audioFn(filename);
+  res.send(data);
 });
 
 app.get("/report", (req, res) => {
