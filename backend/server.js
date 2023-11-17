@@ -1,6 +1,8 @@
 
 import express from "express"
 // import cors from "cors"
+// import cors
+
 
 // const dotenv=require('dotenv');
 import { createRequire } from "module";
@@ -9,13 +11,13 @@ import OpenAI from 'openai';
 import {createReadStream} from "fs"
 
 const require = createRequire(import.meta.url);
-
+const cors = require('cors')
 const multer = require('multer')
 
 config()
 const model = "whisper-1"
 const openai = new OpenAI({
-  apiKey: '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',
+  apiKey: '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',
 });
 
 
@@ -24,6 +26,7 @@ const app=express();
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
+app.use(cors())
 
 
 
