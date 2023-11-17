@@ -15,7 +15,7 @@ const multer = require('multer')
 config()
 const model = "whisper-1"
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY || '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',
+  apiKey: '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',
 });
 
 
@@ -34,7 +34,7 @@ app.post('/upload',upload.single('file'),(req,res)=>{
     console.log(req.file);
     res.send('Single file upload');  
 })
-app.listen(3000,()=>console.log('Server started at port:3000'));
+app.listen(4000,()=>console.log('Server started at port:3000'));
 
 // *********************************************************
 
@@ -50,7 +50,7 @@ audioFn();
 // Whisper api
 async function audioFn(){
     const transcription = await openai.audio.transcriptions.create({
-    file : createReadStream("backend/audio.m4a"),
+    file : createReadStream("./audio.m4a"),
     model : model,
     language:"en",
     temperature:0.2
@@ -69,7 +69,7 @@ function askQuestion(question){
      // returns a promise
     let pr = openai.chat.completions.create({
         messages: [{ role: 'user', content: question }],
-        model: 'gpt-4',
+        model: 'gpt-3.5-turbo',
     })
 
     return pr 
