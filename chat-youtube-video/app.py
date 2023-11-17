@@ -1,6 +1,6 @@
 import streamlit as st
 from businessLogic import transcribeVideoOrchestrator
-from businessLogic import transcribeVideoCustom
+
 
 
 def main():
@@ -13,14 +13,18 @@ def main():
 
     # User input: YouTube URL
     url = st.text_input("Enter YouTube URL:")    
-    my_upload = st.file_uploader("Upload a video", type=["mp4"])
-    print(my_upload)
+    # my_upload = st.file_uploader("Upload a video", type=["mp4"])
+    # print(my_upload)
 
     # User input: model
     # models = ["tiny", "base", "small", "medium", "large"]
     # model = st.selectbox("Select Model:", models)
     # st.write(
+    
+    
     #     "If you take a smaller model it is faster but not as accurate, whereas a larger model is slower but more accurate.")
+    with st.sidebar:
+        api_key=st.text_input("Enter api key")
     if st.button("Process Video"):
         if my_upload is not None:
             if my_upload.size > MAX_FILE_SIZE:

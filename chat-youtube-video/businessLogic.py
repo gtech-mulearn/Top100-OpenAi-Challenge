@@ -1,6 +1,6 @@
 import tempfile
 from pprint import pprint
-from pydub import AudioSegment
+
 import whisper
 from pytube import YouTube
 from openai import OpenAI
