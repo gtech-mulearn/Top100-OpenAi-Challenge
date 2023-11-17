@@ -10,10 +10,11 @@ import Backdrop from '@mui/material/Backdrop';
 
 
 interface IndustryDialogProps {
-  //onSave: (industry: string) => void;
+ 
+  onClose: () => void;
 }
 
-const IndustryDialog: React.FC<IndustryDialogProps> = ({ onSave , onClose}) => {
+const IndustryDialog: React.FC<IndustryDialogProps> = ({  onClose}) => {
   const [open, setOpen] = useState(true);
   const [industry, setIndustry] = useState('');
 
