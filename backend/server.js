@@ -1,6 +1,7 @@
 import express from "express";
 // import cors from "cors"
 // import cors
+//connnect to database
 
 // const dotenv=require('dotenv');
 import { createRequire } from "module";
@@ -9,10 +10,12 @@ import OpenAI from "openai";
 import { createReadStream } from "fs";
 import { log } from "console";
 
+
 const require = createRequire(import.meta.url);
 const cors = require("cors");
 const multer = require("multer");
-
+const mongoose = require("mongoose");
+import Report from "./models/report.js";
 config();
 const model = "whisper-1";
 const openai = new OpenAI({
@@ -41,6 +44,16 @@ const upload = multer({ storage: storage, preservePath: true });
 // upload mp3 file
 let filename;
 let data;
+let answer;
+
+//connect to database
+const dbURI = process.env.MONGODB_URI;
+mongoose
+  .connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then((result) => app.listen(4002))
+  .catch((err) => console.log(err));
+
+
 app.post("/upload", upload.single("file"), async (req, res) => {
   console.log(req.file);
   res.send(`${req.file.path}`);
@@ -50,12 +63,34 @@ app.post("/upload", upload.single("file"), async (req, res) => {
   data = await audioFn(filename);
 });
 
-app.get("/report", (req, res) => {
-  console.log("passing" + data + "to report route");
-  res.send(data);
+// save report to database
+app.post("/report", async(req, res) => {
+  const report =  await new Report({
+    report:  answer,
+  });
+  report
+    .save()
+    .then((result) => {
+      console.log(result);
+      res.send(result);
+    })
+    .catch((err) => console.log(err));
 });
 
-app.listen(4002, () => {
+// get report from database
+app.get("/report", (req, res) => {
+  Report.find()
+    .then((result) => {
+      res.send(result);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
+
+
+app.listen(4003, () => {
   console.log("hi running");
 });
 
@@ -95,6 +130,7 @@ function findAnswer(promise) {
   promise
     .then((data) => {
       let res = data.choices[0].message.content;
+      answer = res;
       console.log(res);
       return res;
     })
