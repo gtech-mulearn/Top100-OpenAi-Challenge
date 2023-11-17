@@ -2,6 +2,9 @@ import './App.css'
 import Upload from './pages/Upload'
 import Chat from './pages/Chat'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Mail } from 'lucide-react';
+import { MainApp } from './pages/MainApp';
+import { DetailsPage } from './pages/DetailsPage';
 
 function App() {
 
@@ -9,8 +12,8 @@ function App() {
     <>
       <Router>
           <Routes>
-              <Route path="/" element={<Upload />} />
-              <Route path="/chat" element={<Chat />} />
+              <Route path="/" element={<DetailsPage/>} />
+              <Route path="/detailspage" element={<DetailsPage/>} />
           </Routes>
       </Router>
     </>
