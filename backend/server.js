@@ -1,6 +1,8 @@
 
 import express from "express"
 // import cors from "cors"
+// import cors
+
 
 // const dotenv=require('dotenv');
 import { createRequire } from "module";
@@ -9,13 +11,13 @@ import OpenAI from 'openai';
 import {createReadStream} from "fs"
 
 const require = createRequire(import.meta.url);
-
+const cors = require('cors')
 const multer = require('multer')
 
 config()
 const model = "whisper-1"
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY || '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',
+  apiKey: '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',
 });
 
 
@@ -24,6 +26,7 @@ const app=express();
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
+app.use(cors())
 
 
 
@@ -34,7 +37,7 @@ app.post('/upload',upload.single('file'),(req,res)=>{
     console.log(req.file);
     res.send('Single file upload');  
 })
-app.listen(3000,()=>console.log('Server started at port:3000'));
+app.listen(4000,()=>console.log('Server started at port:3000'));
 
 // *********************************************************
 
@@ -50,7 +53,7 @@ audioFn();
 // Whisper api
 async function audioFn(){
     const transcription = await openai.audio.transcriptions.create({
-    file : createReadStream("backend/audio.m4a"),
+    file : createReadStream("./audio.m4a"),
     model : model,
     language:"en",
     temperature:0.2
@@ -69,7 +72,7 @@ function askQuestion(question){
      // returns a promise
     let pr = openai.chat.completions.create({
         messages: [{ role: 'user', content: question }],
-        model: 'gpt-4',
+        model: 'gpt-3.5-turbo',
     })
 
     return pr 
