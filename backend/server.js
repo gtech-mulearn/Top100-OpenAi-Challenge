@@ -1,6 +1,26 @@
 import express from "express";
 // import cors from "cors"
 // import cors
+//connnect to database
+const mongoose = require("mongoose");
+
+mongoose.connect("mongodb://localhost:27017/whisper", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+
+    })
+    .then(() => {
+        console.log("Connected to the Database successfully");
+    }
+    )
+    .catch((err) => {
+        console.log("Error connecting to the database");
+    }
+    );
+
+
+    
+    
 
 // const dotenv=require('dotenv');
 import { createRequire } from "module";
@@ -41,6 +61,7 @@ const upload = multer({ storage: storage, preservePath: true });
 // upload mp3 file
 let filename;
 let data;
+let answer;
 app.post("/upload", upload.single("file"), async (req, res) => {
   console.log(req.file);
   res.send(`${req.file.path}`);
@@ -51,9 +72,12 @@ app.post("/upload", upload.single("file"), async (req, res) => {
 });
 
 app.get("/report", (req, res) => {
-  console.log("passing" + data + "to report route");
-  res.send(data);
+  console.log("passing" + answer + "to report route");
 });
+
+// post  data to fronte
+
+
 
 app.listen(4002, () => {
   console.log("hi running");
@@ -95,6 +119,7 @@ function findAnswer(promise) {
   promise
     .then((data) => {
       let res = data.choices[0].message.content;
+      answer=res;
       console.log(res);
       return res;
     })
