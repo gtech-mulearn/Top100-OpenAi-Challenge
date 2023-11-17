@@ -2,7 +2,7 @@ import React from 'react'
 import Recorder from '../components/Recorder'
 import NavBar from '../components/NavBar'
 
-function Report() {
+function RecordPage() {
   return (
     <main>
       <NavBar />
@@ -13,4 +13,4 @@ function Report() {
   );
 }
 
-export default Report
+export default RecordPage;
