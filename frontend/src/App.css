@@ -119,7 +119,7 @@ nav ul li a{
   text-align: center;
   font-family: 'poppins',Arial, Helvetica, sans-serif;
 }
-.wave{
+/* .wave{
   display: none;
 }
 .micwave-container{
@@ -148,4 +148,20 @@ nav ul li a{
   justify-content: center;
   margin-top: 10px;
   height: 40px;
+} */
+
+#playlist audio{
+  display: none;
+}
+
+.btn-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+.btn-container button{
+  border:1px solid yellowgreen;
+  padding: 10px 20px;
 }

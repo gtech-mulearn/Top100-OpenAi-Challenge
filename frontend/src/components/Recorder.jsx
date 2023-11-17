@@ -66,7 +66,7 @@ const Recorder = () => {
   };
 
   return (
-    <div>
+    <div className="btn-container">
       <button onClick={handleButtonClick} className="text-white">
         {isRecording ? "Stop recording" : "Start recording"}
       </button>
