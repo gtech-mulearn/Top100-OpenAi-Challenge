@@ -125,12 +125,26 @@ function askQuestion(question) {
   return pr;
 }
 
+const insretToDB = async() => {
+  const report = await new Report({
+    report: answer,
+  });
+  report
+    .save()
+    .then((result) => {
+      console.log(result);
+      // res.send(result);
+    })
+    .catch((err) => console.log(err));
+}
+
 function findAnswer(promise) {
   promise
     .then((data) => {
       let res = data.choices[0].message.content;
       answer = res;
       console.log(res);
+      insretToDB()
       return res;
     })
     .catch((err) => {
