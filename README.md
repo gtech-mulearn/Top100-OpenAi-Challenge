@@ -45,5 +45,4 @@ This part of the project handles Discord integration. It fetches the unstructure
 5. Install the dependencies: `pip install discord.py`
 6. Start the bot: `python main.py`
 
-    #### you can invite discord bot to your server using link
-    > https://discord.com/api/oauth2/authorize?client_id=1174759825368940616&permissions=1084479764544&scope=bot
+ 
