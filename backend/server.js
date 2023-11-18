@@ -78,7 +78,7 @@ app.post("/report", async(req, res) => {
 });
 
 // get report from database
-app.get("/report", (req, res) => {
+app.get("/reports", (req, res) => {
   Report.find()
     .then((result) => {
       res.send(result);
