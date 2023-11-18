@@ -68,7 +68,7 @@ export function DialogDemo() {
           </div>
           <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="columns" className="text-right">
-              conlumns
+              columns
             </Label>
             <Input
             onChange={e=>{setColumns(e.target.value)}} value={columns}
@@ -132,15 +132,33 @@ export function DetailsPage(){
     }  
     
     return <>
-    <div className='p-7'>
-    <h1>Enter data to insert after configuring settings</h1>
+    <div className='bg-black text-white'>
+    <div className='bg-black text-white h-screen flex-col place-between'>
+    <div className='flex p-4 grow bg-gray-900'><h1>AutoEntry</h1></div> 
     
+ 
+    <div className=" p-7 leading-relaxed h-auto text-gray-300 text-[19px] flex-col overscroll:hidden grow-[1] ">
+      
+      <div className='flex-col grow-[1] h-full'>
+      <h1>Steps to Setup AutoEntry</h1>
+      1.<span className='pr-1'></span> Create a new spread sheet. (take care that name of spread sheet has no spaces)<br/>
+      2.<span className='pr-1'></span> Give editor access to given mail autoexcelserviceaccount@autoexcel-405401.iam.gserviceaccount.com<br/>
+      3.<span className='pr-1'></span> Use the setting button on top right of the screen to set the configuration<br/>
+      3.<span className='pr-1'></span> Now give a small context for your business using context ".....".<br/>
+      4.<span className='pr-1'></span> Give the columns of excel sheet in order using columns ".....".<br/>
+      5.<span className='pr-1'></span> Set sheet name using sheet "..."<br/>
+      6.<span className='pr-1'></span> Now you can send unsorted data to the bot and it will be sorted and added to the sheet.
+  
+      </div>
+      <div className='flex text-gray-300 mt-[300px] grow m-2'><Input className='bg-black' type="text" onChange={e=>setData(e.target.value)} />
+      <button className=' ml-3 text-lg px-5 rounded bg-gray-900 text-white hover:outline outline-2 p-2' onClick={handleOnClick}>send</button>
+      </div>
+      </div>
+      
     <DialogDemo/>
-    <Label htmlFor='unstructured'></Label>
-    <Input id="unstructured" className='mr-25 my-5' value={data} placeholder='enter your data' onChange={e=>{setData(e.target.value)}}/>
-    <Button className='mx-7' onClick={handleOnClick}>
-        send
-    </Button>
+    
+    
+    </div>
     </div>
     </>
 }
