@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Skill Spotter{% endblock %}
+
+{% block content %}
+<!-- myapp/templates/analyze_resume.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Analyze Resume</title>
+</head>
+
+<body>
+    <h2>Analyze Resume</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Analyze</button>
+    </form>
+
+    {% if summary %}
+    <h3>Summary:</h3>
+    <p>{{ summary }}</p>
+    {% endif %}
+</body>
+
+</html>
+
+{% endblock %}
