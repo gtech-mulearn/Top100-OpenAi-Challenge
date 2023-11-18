@@ -1,25 +1,49 @@
-# Top100-OpenAI-Challenge
+# AutoExcel
 
-## Innovate with AI: Harnessing OpenAI's Capabilities Across Diverse Domains
+AutoExcel is a project that takes unstructured message data and converts it into structured messages in JSON format. It utilizes the Google Sheets API to store the structured messages in an Excel file.
 
-### Overview:
-In an era of rapid technological evolution, AI's transformative potential in various industries is increasingly evident. OpenAI's latest APIs offer a powerful toolkit for redefining problem-solving and innovation. This hackathon invites imaginative individuals to explore the expansive potential of these APIs across multiple sectors.
+The project consists of three repositories:
 
-### Challenge:
-Participants will harness OpenAI's latest APIs to develop groundbreaking applications or solutions. This challenge is deliberately open-ended, encouraging creativity and innovation in any domain – including healthcare, finance, education, entertainment, environmental sustainability, or beyond. Success hinges on effectively leveraging AI to tackle real-world challenges, enhance systems, or forge entirely novel innovations.
+## Frontend
+The frontend is built with React and Vite. It provides a user-friendly interface to interact with the application.
+[Frontend Repository Link](https://github.com/riptide-rv/Top100-OpenAi-Challenge)
 
-### Objectives:
-- **Identify**: Recognize a problem or opportunity in your chosen domain.
-- **Develop**: Craft an innovative solution using OpenAI's APIs. Solutions may encompass natural language processing, machine learning, data analysis, automation, or any AI-driven approach provided by OpenAI.
-- **Demonstrate**: Show how your solution can significantly impact your chosen field, whether it's through solving complex issues, boosting efficiency, or unlocking new possibilities.
+## API
+The API is built with FastAPI. It handles the conversion of unstructured data to JSON and interacts with the Google Sheets API to store the data.
+[API Repository Link](https://github.com/riptide-rv/AutoExcel-API)
 
-### Evaluation Criteria:
-1. **Innovation and Creativity**: The originality and ingenuity of the solution.
-2. **Impact**: The potential significance of the solution in the selected domain.
-3. **Use of AI**: The effectiveness of OpenAI's APIs in the project.
-4. **Feasibility**: Technical feasibility and realistic implementability of the solution.
-5. **Presentation**: The clarity and persuasiveness of the project pitch.
+## Discord
+This part of the project handles Discord integration. It fetches the unstructured message data from Discord.
+[Discord Repository Link](https://github.com/riptide-rv/AutoExcel-DiscordBot)
 
-### Call to Action:
-We invite you to think unconventionally and utilize advanced AI tools to make a substantial difference in your chosen field.
+## Installation
 
+### Frontend
+
+1. Clone the frontend repository: `git clone https://github.com/riptide-rv/Top100-OpenAi-Challenge.git`
+2. checkout to branch test
+3. Navigate into the cloned repository: `cd Top100-OpenAi-Challenge/AutoExcel`
+4. Install the dependencies: `npm install`
+5. Start the development server: `npm run dev`
+
+### API
+
+1. Clone the API repository: `git clone https://github.com/riptide-rv/AutoExcel-API.git`
+2. Navigate into the cloned repository: `cd AutoExcel-API`
+3. Create a Python virtual environment: `python3 -m venv env`
+4. Activate the virtual environment: `source env/bin/activate` (on Windows, use `env\Scripts\activate`)
+5. Install the dependencies: `pip install fastapi uvicorn python-dotenv openai gspread`
+6. Create a .env file and store OPENAI_API_KEY=your key in root folder
+6. Start the development server: `uvicorn main:app --reload`
+
+### Discord Bot
+
+1. Clone the Discord bot repository: `git clone https://github.com/riptide-rv/AutoExcel-DiscordBot.git`
+2. Navigate into the cloned repository: `cd AutoExcel-DiscordBot`
+3. Create a Python virtual environment: `python3 -m venv env`
+4. Activate the virtual environment: `source env/bin/activate` (on Windows, use `env\Scripts\activate`)
+5. Install the dependencies: `pip install discord.py`
+6. Start the bot: `python bot.py`
+
+    #### you can invite discord bot to your server using link
+    > https://discord.com/api/oauth2/authorize?client_id=1174759825368940616&permissions=1084479764544&scope=bot
