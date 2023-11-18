@@ -1,6 +1,7 @@
 ## DoppelDoc
 DoppelDoc is a new-age software that efficiently identifies duplicate resumes using advanced text processing and machine-learning techniques. Users can upload multiple PDF resumes, which are then analyzed for duplication through cosine similarity calculations. The application leverages OpenAI's GPT model for intelligent text extraction and employs a HashingVectorizer for consistent vectorization. Results, including duplicate status, are dynamically displayed on a user-friendly interface, enhanced with AJAX for real-time updates without page reloads.
 
+## Github - [DoppelDoc](https://github.com/aditramdas/DoppelDoc)
 ## Key Contribution
 1) Integrated components and managed the Flask app.
 2) PDF manipulation
