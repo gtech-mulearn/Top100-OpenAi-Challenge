@@ -7,7 +7,6 @@ DoppelDoc is a new-age software that efficiently identifies duplicate resumes us
 2) PDF manipulation
 3) OpenAI API integration, Prompt engineering.
 4) Algorithm selection - To select the most suitable and efficient option for calculating the similarity between resumes.
-5) AJAX - For proper UI management.
 
 # Challenges
 1) Finding appropriate parsing library and standardization method.
