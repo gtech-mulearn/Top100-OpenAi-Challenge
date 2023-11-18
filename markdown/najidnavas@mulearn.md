@@ -4,15 +4,18 @@
 
 I am a software engineer with a solid technical background and a passion for problem-solving. I have a Bachelor's in Computer Science with an impressive CGPA of 9.7. My skills span a wide range of technologies, including React JS, Next JS, HTML, JavaScript, CSS, Redux, C++, TypeScript, Python, PHP, MySQL, Java, Git, Node.js, GraphQL, Strapi, Saleor, WordPress, and Shopify. I am fluent in multiple languages, including English, Malayalam, Hindi, and Arabic.
 
-## My Contribution
-
 ### Key Contributions
+
+- My primary objective was to simplify and streamline the management of programming using git within Visual Studio Code using OpenAI-powered prompts which was challenging and laid the skelton for the entire extension. But I am happy that I could implement it. This helped to empower users the git and its command very easily, catering to various other possiblities.
+
+## My Contribution
 
 - **Automated Git Operations**: Developed an extension for Visual Studio Code that simplifies Git version control through natural language prompts.
 - **User-Friendly Interface**: Implemented a prompt-driven interface to bridge the gap between user intent and Git actions, making version control an intuitive part of the development workflow.
 - **Ideastorming** : Gave the idea of integratin git workflow with the helo of prompts and worked on that
 
-##ScreenShots
+## ScreenShots
+
 ![image](https://github.com/gtech-mulearn/Top-100-Coders/assets/104789565/ff26af3f-380a-4022-bd3e-61603fa1f31e)
 ![image](https://github.com/gtech-mulearn/Top-100-Coders/assets/104789565/0ee3439a-a26b-4ec2-b22d-b2e3ac9d3e5e)
 ![image](https://github.com/gtech-mulearn/Top-100-Coders/assets/104789565/3a734846-2a77-4b13-8a98-e9775b0e421d)
