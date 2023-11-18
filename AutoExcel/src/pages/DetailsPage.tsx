@@ -68,7 +68,7 @@ export function DialogDemo() {
           </div>
           <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="columns" className="text-right">
-              context
+              conlumns
             </Label>
             <Input
             onChange={e=>{setColumns(e.target.value)}} value={columns}
