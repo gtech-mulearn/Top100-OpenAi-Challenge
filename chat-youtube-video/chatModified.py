@@ -62,26 +62,26 @@ def get_assistant_response():
 def is_valid_url(url):
     return validators.url(url)
 
-# st.title("Chat with video")
-# st.write("Seamlessly converse with videos, receive text responses, and skip watching the lengthy video content.")
+st.title("Chat with video")
+st.write("Seamlessly converse with videos, receive text responses, and skip watching the lengthy video content.")
 
-# client = OpenAI()
-# initialize_session_state()
+client = OpenAI()
+initialize_session_state()
 
-# # User input: YouTube URL
-# url = st.text_input("Enter YouTube URL:")
+# User input: YouTube URL
+url = st.text_input("Enter YouTube URL:")
 
-# if st.button("Process Video"):
-#     if is_valid_url(url):
-#         process_video(url)
-#     else:
-#         st.warning("Please enter a valid YouTube URL.")
+if st.button("Process Video"):
+    if is_valid_url(url):
+        process_video(url)
+    else:
+        st.warning("Please enter a valid YouTube URL.")
 
-# for message in st.session_state.messages[1:]:
-#     with st.chat_message(message["role"]):
-#         st.markdown(message["content"])
+for message in st.session_state.messages[1:]:
+    with st.chat_message(message["role"]):
+        st.markdown(message["content"])
 
-# if st.session_state.transcription:
-#     prompt = get_user_input()
-#     if prompt:
-#         get_assistant_response()
+if st.session_state.transcription:
+    prompt = get_user_input()
+    if prompt:
+        get_assistant_response()

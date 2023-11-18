@@ -1,7 +1,5 @@
 import streamlit as st
-from businessLogic import transcribeVideoOrchestrator
-
-
+from appLogics import transcribeVideoOrchestrator
 
 def main():
     st.set_page_config(page_title="Chat Youtube", page_icon="🏖", layout="centered")

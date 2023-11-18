@@ -1,9 +1,9 @@
 from openai import OpenAI
 import streamlit as st
-from businessLogic import downloadYoutubeAudio, getTranscriptionsFromAPI, get_video_id
 from youtube_transcript_api import YouTubeTranscriptApi
 import validators
-from appChatLogics import initialize_session_state, is_valid_url, process_video, get_user_input, get_assistant_response
+from urllib.parse import urlparse, parse_qs
+
 
 st.title("Chat with video")
 st.write("Seamlessly converse with videos, receive text responses, and skip watching the lengthy video content.")    
@@ -17,6 +17,16 @@ st.session_state.setdefault("transcription", None)
 
  # User input: YouTube URL
 url = st.text_input("Enter YouTube URL:")  
+
+def get_video_id(youtube_url):
+    # Parse the URL to get the query parameters
+    parsed_url = urlparse(youtube_url)
+    query_params = parse_qs(parsed_url.query)
+
+    # Extract the video ID from the 'v' parameter
+    video_id = query_params.get('v', [''])[0]
+
+    return video_id
 
 if st.button("Process Video"):
     if validators.url(url):
