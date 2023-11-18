@@ -29,10 +29,7 @@ function NavBar() {
           <NavLink to="/report">Reports</NavLink>
         </li>
         <li>
-          <NavLink to="/photos">About</NavLink>
-        </li>
-        <li>
-          <NavLink to="/about">Contact</NavLink>
+          <NavLink to="/">Contact</NavLink>
         </li>
       </ul>
       {active ? (
