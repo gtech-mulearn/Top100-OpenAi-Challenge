@@ -165,3 +165,9 @@ nav ul li a{
   border:1px solid yellowgreen;
   padding: 10px 20px;
 }
+.record-btn{
+  color: white;
+}
+.record-btn:active{
+  background-color: red;
+}

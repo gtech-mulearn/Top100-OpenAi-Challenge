@@ -1,14 +1,9 @@
 import express from "express";
-// import cors from "cors"
-// import cors
-//connnect to database
-
-// const dotenv=require('dotenv');
 import { createRequire } from "module";
 import { config } from "dotenv";
 import OpenAI from "openai";
 import { createReadStream } from "fs";
-import { log } from "console";
+// import { log } from "console";
 
 
 const require = createRequire(import.meta.url);
@@ -49,7 +44,10 @@ let answer;
 const dbURI = process.env.MONGODB_URI;
 mongoose
   .connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then((result) => app.listen(4002))
+  .then((result) =>{
+    app.listen(5000)
+    console.log("mongo db connected");
+    })
   .catch((err) => console.log(err));
 
 
@@ -65,8 +63,9 @@ app.post("/upload", upload.single("file"), async (req, res) => {
 
 // save report to database
 app.post("/report", async(req, res) => {
-  const report =  await new Report({
-    report:  answer,
+  console.log(answer);
+  const report = await new Report({
+    report: answer,
   });
   report
     .save()
@@ -88,10 +87,10 @@ app.get("/reports", (req, res) => {
     });
 });
 
+const PORT=process.env.PORT || 8000
 
-
-app.listen(4003, () => {
-  console.log("hi running");
+app.listen(PORT, () => {
+  console.log("Server started at port "+PORT);
 });
 
 // *********************************************************

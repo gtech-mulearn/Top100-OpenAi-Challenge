@@ -6,7 +6,7 @@ function Reports() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:4003/reports')
+    axios.get('http://localhost:8000/reports')
       .then((res) => {
         setData(res.data);
       

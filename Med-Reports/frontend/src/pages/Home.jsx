@@ -1,5 +1,6 @@
 import React from 'react'
 import NavBar from '../components/NavBar'
+import { Link } from "react-router-dom";
 function Home() {
   return (
     <main>
@@ -7,7 +8,7 @@ function Home() {
       <section className="hero">
   
         <h1>Med reports</h1>
-          <button>Get report</button>
+          <Link to="/report"> <button>Create report</button></Link>
       </section>
     </main>
   );

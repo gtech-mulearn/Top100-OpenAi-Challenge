@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import MicRecorder from "mic-recorder-to-mp3"; // Make sure to import the MicRecorder library
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Recorder = () => {
   const [isRecording, setIsRecording] = useState(false);
@@ -50,7 +51,7 @@ const Recorder = () => {
     formData.append("file", audioFiles[audioFiles.length - 1]); // Assuming the latest file is to be sent
 
     axios
-      .post("http://localhost:4003/upload", formData, {
+      .post("http://localhost:8000/upload", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -67,7 +68,7 @@ const Recorder = () => {
 
   return (
     <div className="btn-container">
-      <button onClick={handleButtonClick} className="text-white">
+      <button onClick={handleButtonClick} className="record-btn">
         {isRecording ? "Stop recording" : "Start recording"}
       </button>
       <ul id="playlist">
@@ -78,8 +79,8 @@ const Recorder = () => {
         ))}
       </ul>
 
-      <button onClick={handleUpload} className="text-white m-5">
-        Upload Last Recording
+        <button onClick={handleUpload} className="text-white m-5"><Link to="/reports">
+        Upload Recording</Link>
       </button>
     </div>
   );
