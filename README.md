@@ -2,7 +2,7 @@
 
 ### Note to the reviewers
 
-Synopysor-Pro project, done by Suryan and Chat-With-Video project, done by me have been merged into a single project titled "[Synopsis Pro - Chat with Video](https://github.com/Top-100-Coders/Synopysor-Pro)" in the last day of the finals since both of the projects are trying to solve the same pain point. Since I don't have not much code contribution in the Synopsis Pro code repository, I am submitting this repo as well for code review.
+Synopysor-Pro project, done by Suryan and Chat-With-Video project, done by me have been merged into a single project titled "[Synopsis Pro - Chat with Video](https://github.com/Top-100-Coders/Synopysor-Pro)" in the last day of the finals since both of the projects are trying to solve the same pain point. Since I don't have much code contribution in the Synopsis Pro code repository, I am submitting this repo as well for code review.
 
 ### Problem Statement
 
