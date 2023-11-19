@@ -102,7 +102,7 @@ if st.session_state.transcription:
         with st.chat_message(message["role"]):
             st.markdown(message["content"])
 
-    if prompt := st.chat_input("Ask anything about the video"):
+    if prompt := st.chat_input("Ask anything about the video. Eg. Say Summarize"):
         st.session_state.messages.append({"role": "user", "content": prompt})
         with st.chat_message("user"):
             st.markdown(prompt)
