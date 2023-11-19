@@ -47,4 +47,7 @@ This part of the project handles Discord integration. It fetches the unstructure
    
    > for discord work properly , create a new bot with all message related permission by visiting discord developer portal and update the code to use the token of created bot.
 
+
+[Demo Link](https://clipchamp.com/watch/TIuzy0IiuSE)
+
  
