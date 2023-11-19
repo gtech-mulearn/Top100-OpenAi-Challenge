@@ -44,5 +44,7 @@ This part of the project handles Discord integration. It fetches the unstructure
 4. Activate the virtual environment: `source env/bin/activate` (on Windows, use `env\Scripts\activate`)
 5. Install the dependencies: `pip install discord.py`
 6. Start the bot: `python main.py`
+   
+   > for discord work properly , create a new bot with all message related permission by visiting discord developer portal and update the code to use the token of created bot.
 
  
