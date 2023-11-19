@@ -1,4 +1,5 @@
 pytube
-openai-whisper
 streamlit
 openai
+youtube_transcript_api
+urllib

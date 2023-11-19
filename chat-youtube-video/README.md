@@ -14,4 +14,7 @@ Our proposed solution is a multi-functional tool that takes video input, perform
 The code of the project is present in chat.py file
 
 ### Run Command
-```streamlit run chat.py```
+```
+pip install -r requirements.txt
+streamlit run chat.py
+```
