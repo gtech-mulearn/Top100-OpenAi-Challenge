@@ -18,4 +18,4 @@ I'm Mrudul John Mathews, a dynamic developer in team Reverend. Even though I am 
 
 #### Final Thoughts:
 
-- If we have the dedication to work on something , whatever it is ,if you are willing to do it, then you can achieve it. DevFlow is such a result of collaboration, innovation, and a shared passion for making coding accessible to everyone.
+- If we have the dedication to work on something , whatever it is ,if you are willing to do it, then you can achieve it. DevFlow is such a result of collaboration, innovation, and a shared passion for making coding accessible to everyone. 

@@ -10,7 +10,7 @@ I am a software engineer with a solid technical background and a passion for pro
 
 ## My Contribution
 
-- **Automated Git Operations**: Developed an extension for Visual Studio Code that simplifies Git version control through natural language prompts.
+- **Automated Git Operations**: Developed an extension for Visual Studio Code that simplifies Git version control through natural language prompts.Most of the new comers are tired of learning the git commands, so for them this will be very helpful . you just need to type what you want to do , devflo will do the rest. even it is a long complicated command.
 - **User-Friendly Interface**: Implemented a prompt-driven interface to bridge the gap between user intent and Git actions, making version control an intuitive part of the development workflow.
 - **Ideastorming** : Gave the idea of integratin git workflow with the helo of prompts and worked on that
 
