@@ -77,20 +77,6 @@ def discoverTopics(text: str, model_name = "gpt-3.5-turbo"):
     )
     return response.choices[0].message.content
 
-def analyseTopics(text: str, model_name = "gpt-3.5-turbo"):
-    print("Content Analysing...")
-    print("Using model:", model_name)
-    response = client.chat.completions.create(
-        model="gpt-3.5-turbo",
-        messages=[
-            {"role": "system", "content": "Analyse content for: Spam, deceptive practices and scams, Sensitive content, Child safety , Nudity and sexual content, Suicide and self-harm , Vulgar language, etc. If yes, give reason. If no, say what type of content the text has."},
-            {"role": "user", "content": text}
-            ],
-        temperature=0,
-        max_tokens=1024
-    )
-    return response.choices[0].message.content
-
 # User input: YouTube URL
 defaultValue = "https://www.youtube.com/watch?v=V5GKwuzKQV0"
     
