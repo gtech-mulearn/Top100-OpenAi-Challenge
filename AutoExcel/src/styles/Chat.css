@@ -1,0 +1,51 @@
+/* Chat.css */
+
+.chat-base {
+    height: 100vh;
+    position: relative;
+    background-color: #22223B;
+  }
+  .text-area-container {
+    display: flex;
+    
+  }
+  
+  .text-area {
+    background-color: #4A4E69;
+    display: inline-block;
+    margin-left: 5%;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #C9ADA7;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 25px;
+    width: 85%;
+    height: 10%;
+    
+  }
+  .text-area::placeholder {
+    color: #C9ADA7; /* Set your desired placeholder color */
+  }
+
+  .voice-icon {
+    position: absolute;
+    top:  88vh;
+    left: 92%;
+    background-color: #9A8C98!important;
+  }
+
+  @media screen and (max-width: 769px) {
+    .text-area {
+      width: 80%;
+      height: 15%;
+    }
+    .voice-icon {
+      position: absolute;
+      top:  88vh;
+      left: 86%;
+      background-color: #9A8C98!important;
+    }
+    
+  }

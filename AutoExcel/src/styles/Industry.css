@@ -1,0 +1,21 @@
+.btn2{
+    background-color: #22223B;
+    color: #C9ADA7;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.6rem 1rem;
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+
+}
+.btn3{
+    background-color: #C9ADA7;
+    color: #4A4E69;
+    border-color: #4A4E69;
+    border-radius: 0.5rem;
+    padding: 0.6rem 1rem;
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+}
