@@ -20,4 +20,6 @@ The code of the project is present in chat.py file
 pip install -r requirements.txt
 streamlit run chat.py
 ```
-
+### Contributers
+-Abhishek S lal
+-Geoff George 
