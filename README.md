@@ -21,5 +21,5 @@ pip install -r requirements.txt
 streamlit run chat.py
 ```
 ### Contributers
--Abhishek S lal
--Geoff George 
+- @Abhishek-S-Lal
+- @geoffgeorgein 
