@@ -1,25 +1,25 @@
-# Top100-OpenAI-Challenge
+# Chat with Video 
 
-## Innovate with AI: Harnessing OpenAI's Capabilities Across Diverse Domains
+### Note to the reviewers
 
-### Overview:
-In an era of rapid technological evolution, AI's transformative potential in various industries is increasingly evident. OpenAI's latest APIs offer a powerful toolkit for redefining problem-solving and innovation. This hackathon invites imaginative individuals to explore the expansive potential of these APIs across multiple sectors.
+Synopysor-Pro project, done by Suryan and Chat-With-Video project, done by me have been merged into a single project titled "[Synopsis Pro - Chat with Video](https://github.com/Top-100-Coders/Synopysor-Pro)" in the last day of the finals since both of the projects are trying to solve the same pain point. Since I don't have much code contribution in the Synopsis Pro code repository, I am submitting this repo as well for code review.
 
-### Challenge:
-Participants will harness OpenAI's latest APIs to develop groundbreaking applications or solutions. This challenge is deliberately open-ended, encouraging creativity and innovation in any domain – including healthcare, finance, education, entertainment, environmental sustainability, or beyond. Success hinges on effectively leveraging AI to tackle real-world challenges, enhance systems, or forge entirely novel innovations.
+### Problem Statement
 
-### Objectives:
-- **Identify**: Recognize a problem or opportunity in your chosen domain.
-- **Develop**: Craft an innovative solution using OpenAI's APIs. Solutions may encompass natural language processing, machine learning, data analysis, automation, or any AI-driven approach provided by OpenAI.
-- **Demonstrate**: Show how your solution can significantly impact your chosen field, whether it's through solving complex issues, boosting efficiency, or unlocking new possibilities.
+Accessing and extracting valuable information from long videos can be time-consuming and challenging. Users often need a more efficient way to comprehend video content, obtain concise summaries, and interact with the content through a conversational interface. The need for a tool that combines video transcription, summarization, and chatbot capabilities arises to address these challenges.
 
-### Evaluation Criteria:
-1. **Innovation and Creativity**: The originality and ingenuity of the solution.
-2. **Impact**: The potential significance of the solution in the selected domain.
-3. **Use of AI**: The effectiveness of OpenAI's APIs in the project.
-4. **Feasibility**: Technical feasibility and realistic implementability of the solution.
-5. **Presentation**: The clarity and persuasiveness of the project pitch.
+### Solution
 
-### Call to Action:
-We invite you to think unconventionally and utilize advanced AI tools to make a substantial difference in your chosen field.
+Our proposed solution is a multi-functional tool that takes video input, performs transcription using speech-to-text technology, generates a concise summary of the video, and incorporates a chatbot for interactive discussions about the content.
 
+### Code
+The code of the project is present in chat.py file
+
+### Run Command
+```
+pip install -r requirements.txt
+streamlit run chat.py
+```
+### Contributers
+- @Abhishek-S-Lal
+- @geoffgeorgein 
